@@ -52,7 +52,7 @@ h2 {
     font-size: 1em; /* Tamanho da fonte */
     background-color: #f9f9f9; /* Cor de fundo clara */
     transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave para foco */
-    margin-left: 50px; /* Margem à esquerda */
+    margin-left: 40px; /* Margem à esquerda */
     margin-top: 10px; /* Margem acima */
 }
 
