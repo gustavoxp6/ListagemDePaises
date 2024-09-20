@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define que o documento é HTML5 -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 (suporta caracteres especiais) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página ser responsiva em dispositivos móveis -->
+    <title>Explorador de Países</title> <!-- Define o título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Vincula o arquivo CSS externo chamado "style.css" para aplicar estilos à página -->
+</head>  
+<body>
+    <!-- Início do conteúdo visível na página -->
+    <div id="list-view"> <!-- Div com o id "list-view", que contém a visualização principal da lista de países -->
+        <div class = "imagem1">
+            <!-- Exibe um título principal com uma imagem ao invés de texto -->
+            <img src="imagem/Lista-de-paises-19-09-2024.png" alt="Lista de Países"> <!-- Exibe a imagem  -->
+        </div>
+        <div class="filters"> <!-- Div com classe "filters", que contém os filtros de busca -->
+            <input type="text" id="search" placeholder="Pesquisar país..."> <!-- Campo de texto para pesquisar um país -->
+            <select id="region-filter"> <!-- Menu suspenso para filtrar países por região -->
+                <option value="">Filtrar por região</option> <!-- Opção padrão vazia -->
+            </select>
+            <select id="subregion-filter"> <!-- Menu suspenso para filtrar países por sub-região -->
+                <option value="">Filtrar por sub-região</option> <!-- Opção padrão vazia -->
+            </select>
+            <select id="population-filter"> <!-- Menu suspenso para filtrar países por faixa de população -->
+                <option value="">Filtrar por população</option> <!-- Opção padrão vazia -->
+                <option value="0-1000000"><1M</option> <!-- Opção para filtrar países com população menor que 1 milhão -->
+                <option value="1000000-10000000">1M-10M</option> <!-- Opção para filtrar países com população entre 1M e 10M -->
+                <option value="10000000-100000000">10M-100M</option> <!-- Opção para filtrar países com população entre 10M e 100M -->
+                <option value="100000000-">>100M</option> <!-- Opção para filtrar países com mais de 100 milhões de habitantes -->
+            </select>
+            <select id="sort"> <!-- Menu suspenso para ordenar a lista de países -->
+                <option value="">Ordenar por</option> <!-- Opção padrão vazia -->
+                <option value="name">Nome</option> <!-- Opção para ordenar por nome dos países -->
+                <option value="population">População</option> <!-- Opção para ordenar por população -->
+                <option value="area">Área</option> <!-- Opção para ordenar por área do país -->
+            </select>
+        </div>
+        <div id="country-list"></div> <!-- Div vazia onde a lista de países será carregada dinamicamente -->
+        <button id="load-more">Carregar Mais</button> <!-- Botão para carregar mais países na lista -->
+    </div>
+    
+    <div id="details-view" class="hidden"> <!-- Div para exibir os detalhes de um país, inicialmente escondida com a classe "hidden" -->
+        <h2>Detalhes do País</h2> <!-- Título da seção de detalhes do país -->
+        <div id="country-details"></div> <!-- Div onde os detalhes específicos de um país serão exibidos -->
+        <button class="back-button" onclick="showListView()">Voltar para a lista</button> <!-- Botão para voltar à lista de países, chama a função JavaScript "showListView()" ao ser clicado -->
+    </div>
+
+    <script src="script.js"></script> <!-- Vincula o arquivo JavaScript externo chamado "script.js" que controlará a lógica da página -->
+</body>
+</html>
