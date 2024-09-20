@@ -1,0 +1,160 @@
+
+
+        /* Define o estilo geral do corpo da página */
+body {
+    font-family: Georgia, sans-serif; /* Fonte principal do texto */
+    line-height: 1.6; /* Define o espaçamento entre linhas */
+    color: #ffffff; /* Cor do texto branco */
+    max-width: 1200px; /* Define a largura máxima da página */
+    margin: 0 auto; /* Centraliza o conteúdo da página */
+    padding: 20px; /* Espaçamento interno da página */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Fundo com gradiente escuro */
+        url(imagem/c294f8f5faa03d7bcdb735c7799e6d6d.png); /* Imagem de fundo */
+}
+
+/* Estilo do título principal (h1) */
+h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 50px; /* Tamanho da fonte do título */
+    margin-top: auto;
+    text-shadow: 
+        2px 2px 0px black,   /* Sombra à direita e para baixo */
+        -2px 2px 0px black,  /* Sombra à esquerda e para baixo */
+        2px -2px 0px black,  /* Sombra à direita e para cima */
+        -2px -2px 0px black; /* Sombra à esquerda e para cima */
+}
+
+/* Estilo do subtítulo (h2) */
+.imagem1 img {
+    margin-left: 15%;
+    max-width: 70%; /* Largura máxima da imagem */
+    height: auto; /* Altura ajustada proporcionalmente */
+    width: 970px; /* Largura fixa da imagem */
+}
+#list-view {
+    margin-top: 5px; /* Adiciona uma margem superior para empurrar a lista para baixo */
+}
+/* Estilo do container de filtros */
+#filters {
+    display: grid; /* Usa grid para layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Organiza filtros em colunas ajustáveis */
+    gap: 20px; /* Espaço entre os itens */
+    margin-bottom: 20px; /* Espaço abaixo do container */
+}
+
+/* Estilo dos campos de input e select dentro do container de filtros */
+.filters input, .filters select {
+    
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 3px solid #4060bb; /* Borda azul-marinho */
+    padding: 8px; /* Espaçamento interno */
+    font-size: 1em; /* Tamanho da fonte */
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave para foco */
+    margin-left: 40px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem acima */
+}
+
+/* Estilo dos campos de input e select ao serem focados ou quando o mouse passa por cima */
+.filters input:focus, .filters select:hover {
+    border-color: #655ee2; /* Cor da borda ao focar */
+    outline: none; /* Remove a borda padrão ao focar */
+    box-shadow: 0 0 0 6px rgba(70, 126, 229, 0.418); /* Sombra ao focar */
+}
+
+/* Estilo do container que exibe a lista de países */
+#country-list {
+    display: grid; /* Usa grid para organizar os países */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Colunas ajustáveis */
+    gap: 30px; /* Espaço entre os itens */
+}
+
+/* Estilo dos cartões de países */
+.country-card {
+    margin-top: 40px; /* Espaço superior */
+    border: 1px solid #5eb6f0; /* Borda azul clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Texto centralizado */
+    cursor: pointer; /* Cursor muda para "pointer" ao passar por cima */
+    transition: transform 0.3s ease, box-shadow 0.5s ease; /* Suaviza a animação */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Sombra com cor ciano */
+}
+
+/* Efeito ao passar o mouse sobre o cartão do país */
+.country-card:hover {
+    transform: scale(1.1); /* Aumenta o cartão em 10% */
+    box-shadow: 
+        0 0 30px rgba(0, 255, 255, 1),  /* Brilho mais intenso */
+        0 0 60px rgba(0, 255, 255, 0.8),
+        0 0 100px rgba(0, 255, 255, 0.6),
+        0 0 100px rgba(0, 255, 255, 0.2); /* Luz espalhada */
+    background: rgba(0, 0, 0, 0.39); /* Fundo semi-transparente */
+}
+
+/* Ajuste da imagem dentro dos cartões */
+.country-card img {
+    max-width: 100%; /* Largura máxima da imagem */
+    height: auto; /* Altura ajustada proporcionalmente */
+    object-fit: cover; /* Preenche o espaço de forma proporcional */
+}
+
+/* Estilo da seção de detalhes do país */
+#country-details {
+    margin-top: 9%; /*margen acima*/
+    text-align: center; /* Centraliza o conteúdo */
+    position: absolute; /* Posiciona o elemento de forma absoluta */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza completamente */
+    background-color: rgba(0, 0, 0, 0.575); /* Fundo semi-transparente */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Ajuste da imagem nos detalhes do país */
+#country-details img {
+    
+    max-width: 70%; /* Largura máxima da imagem */
+    height: auto; /* Altura ajustada proporcionalmente */
+    width: 450px; /* Largura fixa da imagem */
+}
+
+/* Estilo do botão de voltar */
+.back-button {
+    display: inline-block; /* Botão exibido como bloco inline */
+    position: absolute; /* Posicionado de forma absoluta */
+    top: 0; /* Alinhado ao topo */
+    margin-top: 40px; /* Espaçamento superior */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: rgb(255, 255, 255); /* Fundo branco */
+    border: solid rgba(7, 114, 255, 0.897); /* Borda azul */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+}
+
+/* Efeito ao passar o mouse sobre o botão de voltar */
+.back-button:hover {
+    background-color: rgba(7, 114, 255, 0.897); /* Fundo azul */
+    border: solid white; /* Borda branca */
+    color: white; /* Texto branco */
+}
+
+/* Esconde o elemento quando a classe "hidden" é aplicada */
+.hidden {
+    display: none; /* Não exibe o elemento */
+}
+
+/* Estilo do botão de "Carregar Mais" */
+#load-more {
+    display: block; /* Exibe o botão como um bloco */
+    margin: 20px auto; /* Centraliza o botão horizontalmente */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #007bff; /* Fundo azul */
+    color: white; /* Texto branco */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+}
+ 
